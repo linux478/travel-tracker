@@ -4,21 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Starter Kit</title>
+  <link rel="stylesheet" href="/src/css/base.scss"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <title>Travel Tracker Final Project</title>
 </head>
 <body>
-  <!-- <img src="./images/turing-logo.png" alt="turing logo"> -->
-  <label for="start">Pick a Start Date for Your Next Trip:</label>
+  <nav>
+    <div>
+      <h1>Travel Tracker</h1>
+      <h2> Welcome USERNAME</h2>
+      <h3>You have spent $$$ this year (this total includes the 10% travel agent's fee)</h3>
+    </div>
+  </nav>
+  <aside>
+    <section>
+      <section class="search-trip-dates hidden">
+        <label>Select A Date For Your Next Trip:</label>
+        <input class="date-input" placeholder="YYYY/MM/DD">
+        <button class="date-button search">Search</button>
+    </section>
+    </section>
+  </aside>
+  <main>
+  </main>
 
-<input type="date" id="start" name="trip-start"
-       value="2018-07-22"
-       min="2018-01-01" max="2018-12-31"> 
 
-       
 
-  
+
+
+
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
-
 </body>
 </html>
+<!-- <img src="./images/turing-logo.png" alt="turing logo"> -->
