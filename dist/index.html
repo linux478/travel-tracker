@@ -15,10 +15,9 @@
     <div>
       <h1>Travel Tracker</h1>
       <h2> Welcome USERNAME</h2>
-      <h3>You have spent $$$ this year (this total includes the 10% travel agent's fee)</h3>
     </div>
   </nav>
-  <aside>
+  <aside class="left-sidebar">
     <section>
       <section class="search-trip-dates hidden">
         <label>Select A Date For Your Next Trip:</label>
@@ -28,15 +27,27 @@
     </section>
   </aside>
   <main>
+    <h3>Traveler's Dashboard</h3>
+    <p>All of my trips (past, present, upcoming and pending)</p>
   </main>
-
-
-
-
-
-
+  <aside class"right-sidebar">
+    <h3>You have spent $$$ this year*</h3>
+    <h4>*(this total includes the 10% travel agent's fee)</h4>
+  </aside>
+<footer>
+</footer>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
 </body>
 </html>
 <!-- <img src="./images/turing-logo.png" alt="turing logo"> -->
+<!-- need login section
+need to build out containers to hold each destination info based on the destination object:
+{
+"id": 1,
+"destination": "Lima, Peru",
+"estimatedLodgingCostPerDay": 70,
+"estimatedFlightCostPerPerson": 400,
+"image": "https://images.unsplash.com/photo-1489171084589-9b5031ebcf9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+"alt": "overview of city buildings with a clear sky"
+}, -->
