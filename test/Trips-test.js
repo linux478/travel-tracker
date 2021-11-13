@@ -43,6 +43,30 @@ describe('Trip', () => {
   });
 
   it('should have a UserID', function() {
-    expect(trip.userID).to.equal(44)
+    expect(trip.userID).to.equal(44);
+  });
+
+  it('should have a destination', function() {
+    expect(trip.destinationID).to.equal(49);
+  });
+
+  it('should have travelers', function() {
+    expect(trip.travelers).to.equal(1);
+  });
+
+  it('should have a date', function() {
+    expect(trip.date).to.equal("2022/09/16");
+  });
+
+  it('should have a duration', function() {
+    expect(trip.duration).to.equal(8);
+  });
+
+  it('should have a status', function() {
+    expect(trip.status).to.equal("approved");
+  });
+
+  it('should have suggested activities', function() {
+    expect(trip.suggestedActivities).to.deep.equal([]);
   });
 });
