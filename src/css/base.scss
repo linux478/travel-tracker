@@ -2,5 +2,57 @@
 @import '_variables';
 
 body {
-  background: $primary-background;
+  background: lightblue;
+  margin: 0;
+}
+
+.nav-section {
+  display: flex;
+  border: 2px solid white;
+}
+
+.welcome-section {
+  width: 50%;
+  border: 2px solid black;
+}
+
+.travel-money-spent {
+  width: 50%;
+  border: 2px solid white;
+}
+
+.main-travel-info-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  border: 2px solid red;
+}
+
+.main-dashboard-section {
+  display: flex;
+  border: 2px solid blue;
+  width: 100%;
+}
+
+.trips-info-section {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid white;
+  width: 100%;
+}
+
+.upcoming-trips-section,
+.present-trips-section,
+.pending-trips-section,
+.past-trips-section {
+  border: 2px solid hotpink;
+  margin-left: 20px;
+  width: 47%;
+  height: 40%;
+  margin: 10px;
+
+}
+
+.hidden {
+  display: none;
 }
