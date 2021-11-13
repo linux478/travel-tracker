@@ -11,29 +11,49 @@
   <title>Travel Tracker Final Project</title>
 </head>
 <body>
-  <nav>
-    <div>
+  <nav class="nav-section">
+    <div class="welcome-section">
       <h1>Travel Tracker</h1>
       <h2> Welcome USERNAME</h2>
     </div>
+    <section class="travel-money-spent">
+      <h3>You have spent $$$ this year*</h3>
+      <h4>*(this total includes the 10% travel agent's fee)</h4>
+    </section>
   </nav>
-  <aside class="left-sidebar">
-    <section>
-      <section class="search-trip-dates hidden">
-        <label>Select A Date For Your Next Trip:</label>
-        <input class="date-input" placeholder="YYYY/MM/DD">
-        <button class="date-button search">Search</button>
-    </section>
-    </section>
-  </aside>
-  <main>
-    <h3>Traveler's Dashboard</h3>
-    <p>All of my trips (past, present, upcoming and pending)</p>
-  </main>
-  <aside class"right-sidebar">
-    <h3>You have spent $$$ this year*</h3>
-    <h4>*(this total includes the 10% travel agent's fee)</h4>
-  </aside>
+  <section class="main-travel-info-section">
+    <main class="main-dashboard-section">
+      <h3>Traveler's Dashboard</h3>
+      <section class="trips-info-section">
+        <section class="upcoming-trips-section">
+          <h3>Upcoming Trips</h3>
+        </section>
+        <section class="present-trips-section">
+          <h3>Present Trips</h3>
+        </section>
+        <section class="pending-trips-section">
+          <h3>Pending Trips</h3>
+        </section>
+        <section class="past-trips-section">
+          <h3>Past Trips</h3>
+        </section>
+      </section>
+    </main>
+  </section>
+  <section class="search-trip-dates hidden">
+    <label>Select A Date For Your Next Trip:</label>
+    <input class="date-input" placeholder="YYYY/MM/DD">
+    <button class="date-button search">Search</button>
+  </section>
+  <section class="user-login-section hidden">
+    <form class="container">
+      <label for="username-login"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username-user" required>
+      <label for="user-password"><b>Password</b></label>
+      <input type="text" placeholder="Enter Password" name="password-user" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
 <footer>
 </footer>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->

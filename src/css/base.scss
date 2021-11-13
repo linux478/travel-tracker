@@ -2,5 +2,37 @@
 @import '_variables';
 
 body {
-  background: $primary-background;
+  background: lightblue;
+  margin: 0;
+}
+
+.nav-section {
+  display: flex;
+  border: 2px solid white;
+}
+
+.welcome-section {
+  width: 50%;
+  border: 2px solid black;
+}
+
+.travel-money-spent {
+  width: 50%;
+  border: 2px solid white;
+}
+
+.main-travel-info-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  border: 2px solid red;
+}
+
+.main-dashboard-section {
+  border: 2px solid blue;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
 }
