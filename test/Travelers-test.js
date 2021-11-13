@@ -19,7 +19,7 @@ describe('Traveler', () => {
       expect(Traveler).to.be.a('function');
     });
 
-    it('should instantiate a Travler', function () {
+    it('should instantiate a Traveler', function () {
       expect(traveler).to.be.an.instanceOf(Traveler);
     });
 

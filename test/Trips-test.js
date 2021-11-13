@@ -18,9 +18,13 @@ describe('Trip', () => {
       "suggestedActivities": []
  };
   trip = new Trip(tripData)
-  })
+});
+
  it('should be a function', function() {
    expect(Trip).to.be.a('function');
-  })
+ });
 
+  it('should institate an instance of Trip', function() {
+    expect(trip).to.be.instanceOf(Trip);
+  });
 })
