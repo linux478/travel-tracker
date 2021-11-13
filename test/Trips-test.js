@@ -69,4 +69,6 @@ describe('Trip', () => {
   it('should have suggested activities', function() {
     expect(trip.suggestedActivities).to.deep.equal([]);
   });
+
+  //it should take in a trip and dest data and caculate total cost with agency fee and then pass the method through with the sample data 
 });
