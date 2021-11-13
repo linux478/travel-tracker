@@ -15,7 +15,6 @@ describe('Traveler', () => {
     };
     traveler = new Traveler(travelerData);
   });
-
     it('should be a function', function() {
       expect(Traveler).to.be.a('function');
     });
@@ -35,6 +34,7 @@ describe('Traveler', () => {
     it('should have a traveler type', function() {
       expect(traveler.travelerType).to.be.equal("foodie");
     });
+
 
 
 
