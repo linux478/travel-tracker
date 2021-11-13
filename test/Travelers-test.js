@@ -28,11 +28,11 @@ describe('Traveler', () => {
     });
 
     it('should have a name', function() {
-      expect(traveler.name).to.be.equal("Morey Flanders");
+      expect(traveler.name).to.equal("Morey Flanders");
     });
 
     it('should have a traveler type', function() {
-      expect(traveler.travelerType).to.be.equal("foodie");
+      expect(traveler.travelerType).to.equal("foodie");
     });
 
 

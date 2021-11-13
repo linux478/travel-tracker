@@ -18,7 +18,7 @@ describe('Trip', () => {
       "status": "approved",
       "suggestedActivities": []
  };
-  destinationData = {
+    destinationData = {
       "id": 1,
       "destination": "Lima, Peru",
       "estimatedLodgingCostPerDay": 70,
@@ -26,8 +26,8 @@ describe('Trip', () => {
       "image": "https://images.unsplash.com/photo-1489171084589-9b5031ebcf9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
       "alt": "overview of city buildings with a clear sky"
       };
-        trip = new Trip(tripData)
-        
+        trip = new Trip(tripData, destinationData)
+
       });
 
  it('should be a function', function() {
@@ -36,5 +36,13 @@ describe('Trip', () => {
 
   it('should institate an instance of Trip', function() {
     expect(trip).to.be.instanceOf(Trip);
+  });
+
+  it('should have an ID', function() {
+    expect(trip.id).to.equal(1);
+  });
+
+  it('should have a UserID', function() {
+    expect(trip.userID).to.equal(44)
   });
 });
