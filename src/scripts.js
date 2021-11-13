@@ -26,11 +26,12 @@ window.addEventListener('load', loadApiData);
 
 function loadApiData() {
   //load a single traveler and their data for a past, a preset, upcoming, and pending trips
-  Promise.all([getSingleTraveler(1), getAllTrips(), getAllDestinations()])
+  Promise.all([getSingleTraveler(15), getAllTrips(), getAllDestinations()])
   .then(data => {
     traveler = new Traveler(data[0])
     trips = new Trip(data[0], data[1], data[2])
-    console.log(traveler, trips)
+    trips.findCurrentTravelerTrips()
+    console.log(trips.currentTravelerTrips)
   })
 }
 

@@ -9,7 +9,24 @@ class Trip {
     this.status = tripData.status;
     this.suggestedActivities = tripData.suggestedActivities;
     this.totalCost = 0;
+    this.currentTraveler = travelerData;
+    this.destination = destinationData.id;
+    this.currentTravelerTrips;
+    //all trips below
+    this.trips = tripData;
   }
+  findCurrentTravelerTrips() {
+    // iterating only trips our traveler has taken or is taking
+    // match currentTravelerID to any trips that match that ID and set any current trip ids to that idea
+    //filtering
+     this.currentTravelerTrips = this.trips.filter((trip) => {
+      return trip.userID === this.currentTraveler.id
+    })
+  }
+};
+
+export default Trip;
+//syncing user with user trip and destination id
 
   //have a method on the calss that takes in the destination,. flight and per day cost and the 10% agent fee and does all of the math here and spits out a # and reassigns the property cost to that total
   //tiny sample of data from the api
@@ -23,6 +40,3 @@ class Trip {
 //in script let travelers, let trips, let desination ==> my global vars > the function that invokes my api calls stores the data in those variables > API calls get allUsers, getAllTrips, getAllProjects ===> assign to promise.all?
 //invoke the API calls and then assign that data to this variable --> get a traveler call, not doing login yet but say fetch traveler/1 and set as current user that is presently loggedin & trip class, filter to trips data and api stuff, give me only the trips that belong to this usersID(return all trips to taht user))
 // if traveler id matches user id then show me that trip and return only those
-};
-
-export default Trip;
