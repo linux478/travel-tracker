@@ -1,7 +1,8 @@
 // This is the JavaScript entry file - your code begins here
 // Do not delete or rename this file ********
 import { getAllTravelers, getSingleTraveler, getAllTrips, getAllDestinations } from './apiCalls';
-
+import Traveler from './classes/Traveler';
+import Trip from './classes/Trip';
 // An example of how you tell webpack to use a CSS (SCSS) file
 import './css/base.scss';
 // import './css/_reset.scss';
@@ -23,13 +24,13 @@ console.log("Hello, world")
 //on window load i want page load with the
 window.addEventListener('load', loadApiData);
 
-const loadApiData = () => {
+function loadApiData() {
   //load a single traveler and their data for a past, a preset, upcoming, and pending trips
   Promise.all([getSingleTraveler(1), getAllTrips(), getAllDestinations()])
   .then(data => {
     traveler = new Traveler(data[0])
-    trips = new Trip(data[1], data[2])
-    console.log(traveler)
+    trips = new Trip(data[0], data[1], data[2])
+    console.log(traveler, trips)
   })
 }
 
