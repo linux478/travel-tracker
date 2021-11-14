@@ -1,5 +1,5 @@
 class Trip {
-  constructor(travelerData, tripData, destinationData) {
+  constructor(travelerData, tripData, destinationsData) {
     this.id = tripData.id;
     this.userID = tripData.userID;
     this.destinationID = tripData.destinationID;
@@ -10,7 +10,7 @@ class Trip {
     this.suggestedActivities = tripData.suggestedActivities;
     this.totalCost = 0;
     this.currentTraveler = travelerData;
-    this.destination = destinationData.id;
+    this.destinations = destinationsData;
     this.currentTravelerTrips;
     //all trips below
     this.trips = tripData;
@@ -25,7 +25,17 @@ class Trip {
   }
   findTotalSpent() {
     //user an iterate to iterate over the destinations to get (the duration of each trip * avg cost by day + airplane fee ) => sum + 10%
-    this.currentTravelerTrips.reduce((acc, ))
+    let totalSpent = this.currentTravelerTrips.reduce((acc, trip) => {
+      this.destinations.forEach((destination) => {
+        // console.log(trip.destinationID)
+        if(destination.id === trip.destinationID) {
+          acc += destination.estimatedLodgingCostPerDay * trip.duration
+        }
+      })
+      return acc
+    }, 0)
+    this.totalCost = `$ ${totalSpent}`
+    // STILL NEED TO HAVE THE + destination.estimatedFlightCostPerPerson & TRAVEL AGENT'S 10% FEE
     //might need to round to get a dollar amount
   }
 };

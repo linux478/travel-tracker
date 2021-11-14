@@ -32,7 +32,8 @@ function loadApiData() {
     traveler = new Traveler(data[0])
     trips = new Trip(data[0], data[1], data[2])
     // console.log(trips.currentTravelerTrips)
-    trips.findCurrentTravelerTrips()
+    trips.findCurrentTravelerTrips();
+    trips.findTotalSpent();
     loadTraveler();
   })
 }
@@ -41,6 +42,7 @@ function loadTraveler() {
   domUpdates.displayCurrentTravelerTrips(trips.currentTravelerTrips);
   //call travelers name domUpdates.displayCustomerName() <h1 -> cust name (traveler.Name)>
   //loadTotalAmountSpent domupdates.TotalSpent() <p> trip.totalCost
+  console.log(trips.totalCost)
 }
 
 
