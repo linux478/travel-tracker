@@ -3,6 +3,7 @@
 import { getAllTravelers, getSingleTraveler, getAllTrips, getAllDestinations } from './apiCalls';
 import Traveler from './classes/Traveler';
 import Trip from './classes/Trip';
+import domUpdates from './domUpdates';
 // An example of how you tell webpack to use a CSS (SCSS) file
 import './css/base.scss';
 // import './css/_reset.scss';
@@ -26,14 +27,24 @@ window.addEventListener('load', loadApiData);
 
 function loadApiData() {
   //load a single traveler and their data for a past, a preset, upcoming, and pending trips
-  Promise.all([getSingleTraveler(15), getAllTrips(), getAllDestinations()])
+  Promise.all([getSingleTraveler(25), getAllTrips(), getAllDestinations()])
   .then(data => {
     traveler = new Traveler(data[0])
     trips = new Trip(data[0], data[1], data[2])
+    // console.log(trips.currentTravelerTrips)
     trips.findCurrentTravelerTrips()
-    console.log(trips.currentTravelerTrips)
+    loadTraveler();
   })
 }
+
+function loadTraveler() {
+  domUpdates.displayCurrentTravelerTrips(trips.currentTravelerTrips);
+  //call travelers name domUpdates.displayCustomerName() <h1 -> cust name (traveler.Name)>
+  //loadTotalAmountSpent domupdates.TotalSpent() <p> trip.totalCost
+}
+
+
+
 
 
 // 1. Dashboard

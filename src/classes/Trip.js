@@ -23,6 +23,11 @@ class Trip {
       return trip.userID === this.currentTraveler.id
     })
   }
+  findTotalSpent() {
+    //user an iterate to iterate over the destinations to get (the duration of each trip * avg cost by day + airplane fee ) => sum + 10%
+    this.currentTravelerTrips.reduce((acc, ))
+    //might need to round to get a dollar amount
+  }
 };
 
 export default Trip;
